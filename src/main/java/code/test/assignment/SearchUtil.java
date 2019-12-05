@@ -12,11 +12,11 @@ import java.util.stream.Stream;
 
 public class SearchUtil {
 	
-	static final Predicate<Path> isFile = path -> path.toFile().isFile();
-	static final Predicate<Path> isJSFile = path -> path.toString().endsWith(".js");
-	static final Predicate<Path> isTxtFile = path -> path.toString().endsWith(".txt");
-	static final Predicate<Path> isJsonFile = path -> path.toString().endsWith(".json");
-	static final Predicate<Path> isJavaFile = path -> path.toString().endsWith(".java");
+	public static final Predicate<Path> isFile = path -> path.toFile().isFile();
+	public static final Predicate<Path> isJSFile = path -> path.toString().endsWith(".js");
+	public static final Predicate<Path> isTxtFile = path -> path.toString().endsWith(".txt");
+	public static final Predicate<Path> isJsonFile = path -> path.toString().endsWith(".json");
+	public static final Predicate<Path> isJavaFile = path -> path.toString().endsWith(".java");
 	
 	public static List<String> getAllFilesFromDirectory(String searchDirectory) {
 		
@@ -40,11 +40,9 @@ public class SearchUtil {
 			e1.printStackTrace();
 		}
 		
-		return stream.filter(isFile.and(isTxtFile)
-									.or(isJSFile)
-									.or(isTxtFile)
+		return stream.filter(isFile.and(isJSFile)
 									.or(isJsonFile)
-									.or(isJsonFile))
+									.or(isJavaFile))
 				.map(String::valueOf).sorted()
 				.collect(Collectors.toList());
 		
