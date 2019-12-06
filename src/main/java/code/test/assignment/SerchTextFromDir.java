@@ -16,7 +16,7 @@ public class SerchTextFromDir {
 			System.out.println("Please input a search string");
 			String searchString = scanner.nextLine();
 			List<String> fileList = SearchUtil.getAllFilesFromDirectory(directoryPath);
-			fileList = SearchUtil.getSearchedFiles(fileList, searchString);
+			fileList = SearchUtil.searchAndGetFilesUsingSearchString(fileList, searchString);
 			fileList.stream().forEach(System.out::println);
 
 		} catch (Exception e) {
