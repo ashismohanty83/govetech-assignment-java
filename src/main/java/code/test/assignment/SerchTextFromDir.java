@@ -13,7 +13,7 @@ public class SerchTextFromDir {
 
 			System.out.println("Please input a directory to read files");
 			String directoryPath = scanner.nextLine();
-			System.out.println("Please input a search string");
+			System.out.println("Please input a string to search");
 			String searchString = scanner.nextLine();
 			List<String> fileList = SearchUtil.getAllFilesFromDirectory(directoryPath);
 			fileList = SearchUtil.searchAndGetFilesUsingSearchString(fileList, searchString);
