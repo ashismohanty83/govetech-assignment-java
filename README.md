@@ -57,3 +57,26 @@ src\test\java\code\test\assignment\AppTest.java - Run as Junit Test
 		test1.json 
 		todo.js 
 ```
+
+## Class & Method Used for Searching The Directory & scan the Files to find search string
+
+```
+	/**
+	 * 
+	 * To Get List of specific files (.js, .json & .java) from given directory and its child directory to to scan for search string 		i.e. TODO
+	 * 
+	 * @param searchDirectory - Directory and sub-directory to scan 
+	 * @return List of Files path
+	 */
+	public static List<String> getAllFilesFromDirectory(String searchDirectory) {}
+	
+	/**
+	 * Method used for search the token in given files and return the found files with absolute path.
+	 * 
+	 * @param fileList - Files to process and scan for search 
+	 * @param searchString - Token to search in the given files
+	 * @return - return the found files.
+	 */
+	public static List<String> searchAndGetFilesUsingSearchString(List<String> fileList, String searchString) {}
+
+```
